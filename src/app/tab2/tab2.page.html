@@ -1,0 +1,25 @@
+<ion-header>
+  <div class="grad_back">
+    <ion-label class="subject">Albums</ion-label>
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="main_content_div">
+  <ion-searchbar inputmode="numeric" placeholder="Introduce el id del usuario" animated (ionChange)="searchUser($event)"></ion-searchbar>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeMd="4" offsetMd="4">
+        <div class="card_div" *ngFor="let Album of Albums">
+          <div class="round_div">
+            <ion-icon name="albums-outline"></ion-icon>
+          </div>
+          <div class="content_div"> 
+            <ion-label class="name_lbl">{{Album.title}}</ion-label>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

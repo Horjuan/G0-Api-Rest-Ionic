@@ -1,0 +1,26 @@
+<ion-header>
+  <div class="grad_back">
+    <ion-label class="subject">Usuarios</ion-label>
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="main_content_div">
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeMd="4" offsetMd="4">
+        <div class="card_div" *ngFor="let User of Users">
+          <div class="round_div">
+            <ion-icon name="person-circle-outline"></ion-icon>
+          </div>
+          <div class="content_div"> 
+            <ion-label class="name_lbl">{{User.name}}</ion-label>
+            <ion-label class="username_lbl">{{User.username}}</ion-label>
+            <ion-label class="phone_lbl">{{User.phone}}</ion-label>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

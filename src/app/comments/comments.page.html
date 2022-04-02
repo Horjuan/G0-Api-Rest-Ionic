@@ -1,0 +1,26 @@
+<ion-header>
+  <div class="grad_back">
+    <ion-label class="subject">Comentarios</ion-label>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="inicio" [routerLink]="['/tabs/tab4']"></ion-back-button>
+    </ion-buttons>
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="main_content_div">
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeMd="4" offsetMd="4">
+        <div class="card_div" *ngFor="let comment of Comments">
+          <div class="round_div">
+            <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+          </div>
+          <div class="content_div"> 
+            <ion-label class="title_lbl">{{comment.name}}</ion-label>
+            <ion-label class="email_lbl">{{comment.email}}</ion-label>
+            <ion-label class="body_lbl">{{comment.body}}</ion-label>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>

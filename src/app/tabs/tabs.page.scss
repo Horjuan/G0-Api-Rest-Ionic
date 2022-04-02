@@ -1,0 +1,20 @@
+ion-tab-bar {
+    --background: rgb(24, 24, 24);
+  
+    ion-tab-button {
+      --color: white;
+      --color-selected: rgb(156, 70, 226);
+
+      &::before {
+        background-color: transparent;
+        display: block;
+        content: "";
+        margin: 0 auto;
+        width: 20px;
+        height: 2px;
+      }
+      &.tab-selected::before {
+        background-color: rgb(156, 70, 226);
+      }
+    }
+  }
